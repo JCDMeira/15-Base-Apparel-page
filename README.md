@@ -62,6 +62,7 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled components](https://styled-components.com) - CSS in js with stiled components
+- [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp) - gradients with css
 
 ### What I learned
 
