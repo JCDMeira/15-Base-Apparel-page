@@ -12,6 +12,10 @@ export const MyInput = styled.div`
   display: flex;
   position: relative;
 
+  form {
+    display: flex;
+  }
+
   #email {
     width: 21rem;
     box-shadow: 0 0 0 0;
