@@ -34,6 +34,23 @@ export const MyInput = styled.div`
     line-height: 1.4rem;
   }
 
+  .error-image {
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top: 1rem;
+    right: 7rem;
+    display: none;
+  }
+
+  .error {
+    position: absolute;
+    top: 5.5rem;
+    font-size: 1.2rem;
+    color: var(--soft-red);
+    display: none;
+  }
+
   button {
     border: none;
     position: absolute;
