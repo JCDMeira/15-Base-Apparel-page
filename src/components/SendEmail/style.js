@@ -12,7 +12,8 @@ export const MyInput = styled.div`
   display: flex;
   position: relative;
 
-  input {
+  #email {
+    width: 21rem;
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
@@ -23,6 +24,11 @@ export const MyInput = styled.div`
 
     color: var(--desaturated-red);
   }
+  #email::placeholder {
+    color: var(--desaturated-red);
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
 
   button {
     border: none;
@@ -32,5 +38,6 @@ export const MyInput = styled.div`
     width: 64px;
     height: 48px;
     border-radius: 3rem;
+    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   }
 `;

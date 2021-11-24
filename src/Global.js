@@ -27,7 +27,6 @@ export const Conteiner = styled.div`
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(135deg, #fff, #fff5f5);
-
   .logo {
     position: absolute;
     width: 10rem;
@@ -37,8 +36,8 @@ export const Conteiner = styled.div`
   }
 
   .image {
-    margin-top: 8.4rem;
-    margin-bottom: 6.2rem;
+    padding-top: 8.4rem;
+    margin-bottom: 6.1rem;
   }
 
   .info {
@@ -78,7 +77,7 @@ export const Conteiner = styled.div`
     color: #ce9797;
 
     margin-top: 1.5rem;
-    margin-bottom: 3.7rem;
+    margin-bottom: 3.2rem;
     padding: 0 4rem 0 3.9rem;
   }
 `;

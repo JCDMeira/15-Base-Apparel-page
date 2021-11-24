@@ -6,7 +6,7 @@ import { MyInput } from './style';
 function SendEmail() {
   return (
     <MyInput>
-      <input type="email" placeholder="Email address" />
+      <input id="email" type="email" placeholder="Email Address" />
       <button type="submit">
         <img src={arrow} alt="button" />
       </button>
