@@ -3,6 +3,7 @@ import { GlobalStyle, Conteiner } from './Global.js';
 
 import logo from './assets/images/logo.svg';
 import photo from './assets/images/hero-mobile.jpg';
+import { SendEmail } from './components/SendEmail/index.jsx';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
+
+          <SendEmail />
         </div>
       </Conteiner>
     </>

@@ -78,6 +78,7 @@ export const Conteiner = styled.div`
     color: #ce9797;
 
     margin-top: 1.5rem;
+    margin-bottom: 3.7rem;
     padding: 0 4rem 0 3.9rem;
   }
 `;
