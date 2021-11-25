@@ -93,5 +93,15 @@ export const MyInput = styled.div`
       border-radius: 3rem;
       background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
     }
+
+    .error-image {
+      top: 1.6rem;
+      right: 11.6rem;
+    }
+
+    .error {
+      top: 6.5rem;
+      font-size: 1.3rem;
+    }
   }
 `;
