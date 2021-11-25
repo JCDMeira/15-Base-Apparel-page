@@ -17,6 +17,10 @@ function SendEmail() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
     if (data.email === '' || !isEmail(data.email)) setMyError(true);
+    if (isEmail(data.email)) {
+      setMyError(false);
+      setFormValues({});
+    }
   }
 
   function handleChange(e) {
