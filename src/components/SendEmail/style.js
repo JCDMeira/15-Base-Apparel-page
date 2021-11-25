@@ -4,7 +4,6 @@ export const MyInput = styled.div`
   width: 82.93333333333334vw;
   max-width: 31.1rem;
   height: 4.8rem;
-
   border: ${(props) =>
     props.myError === true
       ? '2px solid var(--soft-red)'
@@ -12,7 +11,6 @@ export const MyInput = styled.div`
   box-sizing: border-box;
   border-radius: 30px;
   margin: 0 auto;
-  padding-left: 2.4rem;
   display: flex;
   position: relative;
 
@@ -21,16 +19,24 @@ export const MyInput = styled.div`
   }
 
   #email {
-    width: 21rem;
+    width: 82.93333333333334vw;
+    max-width: 31.1rem;
+    padding-left: 2.4rem;
+
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+    border-radius: 30px;
 
     font-size: 1.4rem;
     line-height: 1.4rem;
     background-color: transparent;
+    cursor: pointer;
 
     color: var(--desaturated-red);
+    :focus {
+      box-shadow: 1px 1px 15px 1px var(--salmon);
+    }
   }
   #email::placeholder {
     color: var(--desaturated-red);
@@ -51,6 +57,7 @@ export const MyInput = styled.div`
     position: absolute;
     top: 5.5rem;
     font-size: 1.2rem;
+    padding-left: 2.4rem;
     color: var(--soft-red);
     display: ${(props) => (props.myError === true ? 'visible' : 'none')};
   }
@@ -70,11 +77,12 @@ export const MyInput = styled.div`
     width: 44.6rem;
     height: 5.6rem;
     max-width: 44.6rem;
-    padding-left: 3rem;
 
     #email {
-      width: 32rem;
-
+      width: 44.6rem;
+      height: 5.6rem;
+      max-width: 44.6rem;
+      padding-left: 3rem;
       font-size: 1.6rem;
       line-height: 1.6rem;
     }
@@ -102,6 +110,7 @@ export const MyInput = styled.div`
     .error {
       top: 6.5rem;
       font-size: 1.3rem;
+      padding-left: 3rem;
     }
   }
 `;
