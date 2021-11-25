@@ -3,16 +3,21 @@ import { GlobalStyle, Conteiner } from './Global.js';
 
 import logo from './assets/images/logo.svg';
 import photo from './assets/images/hero-mobile.jpg';
+import photo2 from './assets/images/hero-desktop.jpg';
 import { SendEmail } from './components/SendEmail/index.jsx';
 
 function App() {
+  const windowSize = window.screen.width;
   return (
     <>
       <GlobalStyle />
       <Conteiner>
         <img className="logo" src={logo} alt="logo" />
         <div className="image">
-          <img src={photo} alt="picture of a woman" />
+          <img
+            src={windowSize < 900 ? photo : photo2}
+            alt="picture of a woman"
+          />
         </div>
         <div className="info">
           <h1>

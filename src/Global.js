@@ -105,4 +105,56 @@ export const Conteiner = styled.div`
       }
     }
   }
+
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .logo {
+      top: 6.4rem;
+      left: 16.5rem;
+      width: 15.8rem;
+      height: 3.4rem;
+    }
+
+    .image {
+      width: 42.36111111111111vw;
+      padding: 0;
+
+      img {
+        width: 42.36111111111111vw;
+        height: 100vh;
+      }
+    }
+
+    .info {
+      width: 57.5vw;
+      padding: 23.2rem 21.8rem 0 16.4rem;
+
+      h1 {
+        font-size: 6.6rem;
+        line-height: 7rem;
+
+        letter-spacing: 0.25em;
+        text-align: left;
+
+
+        span {
+          font-size:  6.6rem;
+          line-height: 6.6rem;
+          letter-spacing: 0.24em;
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        text-align: left;
+        padding: 0;
+        margin-top: 2.1rem;
+
+      }
+    }
+    }
+  }
 `;
