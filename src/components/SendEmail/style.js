@@ -4,7 +4,10 @@ export const MyInput = styled.div`
   width: 31.1rem;
   height: 4.8rem;
 
-  border: 1px solid var(--desaturated-red);
+  border: ${(props) =>
+    props.myError === true
+      ? '2px solid var(--soft-red)'
+      : '1px solid var(--desaturated-red)'};
   box-sizing: border-box;
   border-radius: 30px;
   margin: 0 auto;
@@ -40,7 +43,7 @@ export const MyInput = styled.div`
     position: absolute;
     top: 1rem;
     right: 7rem;
-    display: none;
+    display: ${(props) => (props.myError === true ? 'visible' : 'none')};
   }
 
   .error {
@@ -48,7 +51,7 @@ export const MyInput = styled.div`
     top: 5.5rem;
     font-size: 1.2rem;
     color: var(--soft-red);
-    display: none;
+    display: ${(props) => (props.myError === true ? 'visible' : 'none')};
   }
 
   button {
