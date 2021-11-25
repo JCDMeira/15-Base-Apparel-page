@@ -152,6 +152,7 @@ export const Conteiner = styled.div`
         text-align: left;
         padding: 0;
         margin-top: 2.1rem;
+        margin-bottom: 3.9rem;
 
       }
     }

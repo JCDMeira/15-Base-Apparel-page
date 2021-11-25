@@ -65,4 +65,33 @@ export const MyInput = styled.div`
     border-radius: 3rem;
     background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   }
+
+  @media (min-width: 900px) {
+    width: 44.6rem;
+    height: 5.6rem;
+    max-width: 44.6rem;
+    padding-left: 3rem;
+
+    #email {
+      width: 32rem;
+
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+
+    #email::placeholder {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+    button {
+      border: none;
+      position: absolute;
+      right: 0;
+      top: -0.1rem;
+      width: 100px;
+      height: 56px;
+      border-radius: 3rem;
+      background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    }
+  }
 `;
