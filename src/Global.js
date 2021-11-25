@@ -157,5 +157,15 @@ export const Conteiner = styled.div`
       }
     }
     }
+
+    @media (min-width: 1500px) {
+      .info{
+        padding: 0 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 `;
