@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const MyInput = styled.div`
-  width: 31.1rem;
+  width: 82.93333333333334vw;
+  max-width: 31.1rem;
   height: 4.8rem;
 
   border: ${(props) =>
