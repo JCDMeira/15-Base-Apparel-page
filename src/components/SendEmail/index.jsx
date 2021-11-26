@@ -7,9 +7,16 @@ import { MyInput } from './style';
 
 import error from '../../assets/images/icon-error.svg';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
+
 function SendEmail() {
   const [formValues, setFormValues] = useState({});
   const [myError, setMyError] = useState(false);
+
+  const notify = () => toast.success('Email successfully sent ');
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,6 +27,7 @@ function SendEmail() {
     if (isEmail(data.email)) {
       setMyError(false);
       setFormValues({});
+      notify();
     }
   }
 
@@ -29,23 +37,26 @@ function SendEmail() {
   }
 
   return (
-    <MyInput myError={myError}>
-      <form onSubmit={handleSubmit}>
-        <input
-          id="email"
-          type="text"
-          name="email"
-          placeholder="Email Address"
-          onChange={handleChange}
-          value={formValues.email || ''}
-        />
-        <button type="submit">
-          <img src={arrow} alt="button" />
-        </button>
-      </form>
-      <img className="error-image" src={error} alt="error" />
-      <span className="error">Please provide a valid email</span>
-    </MyInput>
+    <>
+      <MyInput myError={myError}>
+        <form onSubmit={handleSubmit}>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Email Address"
+            onChange={handleChange}
+            value={formValues.email || ''}
+          />
+          <button type="submit">
+            <img src={arrow} alt="button" />
+          </button>
+        </form>
+        <img className="error-image" src={error} alt="error" />
+        <span className="error">Please provide a valid email</span>
+      </MyInput>
+      {/* <ToastContainer autoClose={3000} /> */}
+    </>
   );
 }
 

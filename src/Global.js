@@ -9,6 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     --light: #FFF5F5;
     --light-salmon:#F8BFBF;
     --salmon: #EE8C8C;
+    --toastify-color-success:#EE8C8C;
+    --toastify-color-light: #FFF5F5;
+    --toastify-text-color-light: #413A3A;
   }
 
   *{
