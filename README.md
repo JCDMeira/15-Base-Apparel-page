@@ -32,7 +32,6 @@ Users should be able to:
 
 ### Mobile design
 
-<!--
 <p  align="center">
   <img width="300px" src="./presentation/mobile.png" align="center"></img>
 </p>
@@ -45,7 +44,7 @@ Users should be able to:
 
 <p  align="center"><img width="720px" src="./presentation/desktop.png" align="center"></img></p>
 
-### result of my work
+<!--### result of my work
 
 <p  align="center"><img width="1080px" src="./presentation/design-x-myWork.gif" align="center"></img></p> -->
 
@@ -62,40 +61,90 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled components](https://styled-components.com) - CSS in js with stiled components
-- [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp) - gradients with css
+- [react-toastify](https://fkhadra.github.io/react-toastify/introduction/) - toastify documentation
+- [validator](https://www.npmjs.com/package/validator) - validator documentation
 
 ### What I learned
 
-<!--
-Using the grid template areas to define occupied spaces with an alias
+Creating forms in react has the idea that the mutable state is kept to react's state and updated by it. Therefore, react monitors and also controls the state of the form's inputs. What is called a 'controlled component'. And so it is possible to pass the state and manipulate with other pieces of code.
 
-```CSS
-  .content {
-  display: grid;
-  gap: 0;
-  grid-template-areas:
-    'field1'
-    'field2'
-    'field3';
-}
+```JSX
+import React, { useState } from 'react';
+import { isEmail } from 'validator';
 
-.field1 {
-  grid-area: field1;
-}
-.field2 {
-  grid-area: field2;
-}
-.field3 {
-  grid-area: field3;
-}
-@media (min-width: 900px) {
-  .content {
-    grid-template-areas:
-      'field1 field1'
-      'field2 field3';
+import arrow from '../../assets/images/icon-arrow.svg';
+import { MyInput } from './style';
+
+import error from '../../assets/images/icon-error.svg';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
+
+function SendEmail() {
+  const [formValues, setFormValues] = useState({});
+  const [myError, setMyError] = useState(false);
+
+  const notify = () => toast.success('Email successfully sent ');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    if (data.email === '' || !isEmail(data.email)) setMyError(true);
+    if (isEmail(data.email)) {
+      setMyError(false);
+      setFormValues({});
+      notify();
+    }
   }
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  }
+
+  return (
+    <>
+      <MyInput myError={myError}>
+        <form onSubmit={handleSubmit}>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Email Address"
+            onChange={handleChange}
+            value={formValues.email || ''}
+          />
+          <button type="submit">
+            <img src={arrow} alt="button" />
+          </button>
+        </form>
+        <img className="error-image" src={error} alt="error" />
+        <span className="error">Please provide a valid email</span>
+      </MyInput>
+    </>
+  );
 }
-``` -->
+
+export { SendEmail };
+
+```
+
+Creating a linear gradient
+
+```JS
+import styled from 'styled-components';
+
+export const MyInput = styled.div`
+
+  button {
+    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  }
+`;
+```
 
 ### Useful resources
 
@@ -103,6 +152,12 @@ Using the grid template areas to define occupied spaces with an alias
 - [my figma design](https://www.figma.com/file/qoi5g7sQ81YZysFwJJoWIz/07---Single-price?node-id=0%3A1) - My figma design for help anyone who wants to build this challenge.
 - [CSS units conversor - px to VH/VW/REM](https://it-news.pw/pxtovh/) - CSS units conversor .
 - [Converting Colors](https://convertingcolors.com) - HSL for all color systems.
+- [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp) - gradients with css
+- [Focus](https://pt.stackoverflow.com/questions/5216/como-remover-borda-dos-input-e-textarea-de-todos-os-browsers-quando-clicado) - input focus.
+- [placeholder style](https://www.devmedia.com.br/placeholder-em-html5-texto-padrao-de-input/24503) - how to change the style of a placeholder
+- [placeholder style 2](https://www.horadecodar.com.br/2019/07/16/como-adicionar-css-no-placeholder/) - how to change the style of a placeholder
+- [Complete Forms Guide ](https://www.youtube.com/watch?v=Uv4h8IJhQUg) - React forms guide
+- [react forms ](https://medium.com/@dornelasthabata/react-desenvolvendo-formulários-de-forma-prática-e1a572ee50d5) - developing forms
 
 ## Author
 
