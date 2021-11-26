@@ -44,15 +44,16 @@ Users should be able to:
 
 <p  align="center"><img width="720px" src="./presentation/desktop.png" align="center"></img></p>
 
-<!--### result of my work
+### result of my work
 
-<p  align="center"><img width="1080px" src="./presentation/design-x-myWork.gif" align="center"></img></p> -->
+<p  align="center"><img width="1080px" src="./presentation/design-x-myWork.gif" align="center"></img></p>
+<p  align="center"><img width="1080px" src="./presentation/result.gif" align="center"></img></p>
 
 ### Links
 
 - Solution URL: [My solution for this challenge](https://www.frontendmentor.io/solutions/single-price-grid-with-reactjs-YR5dhXAtZ)
-<!-- - Live Site URL: [check the result](https://jcdmeira-single-price.netlify.app)
-- My figma design: [Figma](https://www.figma.com/file/qoi5g7sQ81YZysFwJJoWIz/07---Single-price?node-id=0%3A1) -->
+- Live Site URL: [check the result](https://jcdmeira-base-apparel.netlify.app)
+- My figma design: [Figma](https://www.figma.com/file/dnk90jvmEmbR4d63FfSy0F/15-base-apparel)
 
 ## My process
 
@@ -149,7 +150,7 @@ export const MyInput = styled.div`
 ### Useful resources
 
 - [react tutorial](https://pt-br.reactjs.org/tutorial/tutorial.html) - This helped me structure the components and build the proposed page.
-- [my figma design](https://www.figma.com/file/qoi5g7sQ81YZysFwJJoWIz/07---Single-price?node-id=0%3A1) - My figma design for help anyone who wants to build this challenge.
+- [my figma design](https://www.figma.com/file/dnk90jvmEmbR4d63FfSy0F/15-base-apparel) - My figma design for help anyone who wants to build this challenge.
 - [CSS units conversor - px to VH/VW/REM](https://it-news.pw/pxtovh/) - CSS units conversor .
 - [Converting Colors](https://convertingcolors.com) - HSL for all color systems.
 - [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp) - gradients with css
