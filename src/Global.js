@@ -38,6 +38,13 @@ export const Conteiner = styled.div`
     left: 3.2rem;
   }
 
+  #desktop{
+    display: none;
+  }
+  #celphone{
+    display: visible;
+  }
+
   .image {
     padding-top: 7.4rem;
     margin-bottom: 3.1rem;
@@ -118,6 +125,13 @@ export const Conteiner = styled.div`
       left: 16.5rem;
       width: 15.8rem;
       height: 3.4rem;
+    }
+
+    #desktop{
+    display: flex;
+  }
+    #celphone{
+      display: none;
     }
 
     .image {
